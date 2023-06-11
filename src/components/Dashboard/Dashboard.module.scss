@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.dashboard {
+  display: grid;
+  gap: 24px;
+
+  padding: 81px 0;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-regular;
+  font-size: $fs-regular;
+  font-weight: $fw-regular;
+  background: $clr-neutral-700;
+  color: $clr-neutral-100;
+}
+
+.active {
+  color: white;
+}
+
+.orange, .lightblue, .red, .green, .purple, .yellow {
+  background-repeat: no-repeat;
+  background-position: top -10px right 20px;
+}
+
+.orange { 
+  background-color: $clr-orange; 
+  background-image: url('../images/icon-work.svg');
+}
+.lightblue { 
+  background-color: $clr-lightblue; 
+  background-image: url('../images/icon-play.svg');
+}
+.red { 
+  background-color: $clr-red; 
+  background-image: url('../images/icon-study.svg');
+}
+.green { 
+  background-color: $clr-green; 
+  background-image: url('../images/icon-exercise.svg');
+}
+.purple { 
+  background-color: $clr-purple; 
+  background-image: url('../images/icon-social.svg');
+}
+.yellow { 
+  background-color: $clr-yellow; 
+  background-image: url('../images/icon-self-care.svg');
+}

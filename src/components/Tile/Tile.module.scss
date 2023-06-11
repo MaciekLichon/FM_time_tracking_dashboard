@@ -1,0 +1,89 @@
+@import '../../styles/variables.scss';
+
+$tile-mob-name: 18px;
+$tile-mob-current: 32px;
+$tile-mob-previous: 15px;
+$tile-desktop-current: 56px;
+
+.tile {
+  position: relative;
+  min-height: 160px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__content {
+    background: $clr-neutral-500;
+    padding: 28px 24px;
+    border-radius: 15px;
+    transition: background 0.3s;
+
+    &:hover {
+      background: hsla(236, 41%, 34%, 1);
+      cursor: pointer;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 30px 30px 32px 30px;
+    }
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3px;
+    cursor: pointer;
+
+    span {
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background: $clr-neutral-100;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: $fw-bold;
+    margin-bottom: 8px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media (min-width: $desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  }
+
+  &__name, &__currentValue {
+    color: white;
+  }
+
+  &__currentValue {
+    font-weight: $fw-light;
+    font-size: $tile-mob-current;
+
+    @media (min-width: $desktop) {
+      font-size: $tile-desktop-current;
+    }
+  }
+
+  &__previousValue {
+    font-size: $tile-mob-previous;
+  }
+}
